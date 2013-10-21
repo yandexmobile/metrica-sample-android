@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import com.yandex.metrica.Counter;
+import com.yandex.sample.metrica.R;
 
 /**
  * MainActivity.java
@@ -31,7 +32,7 @@ public class MainActivity extends Activity {
         goToFruitsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, ListActivity.class));
+                startActivity(new Intent(MainActivity.this, FruitsListActivity.class));
             }
         });
 

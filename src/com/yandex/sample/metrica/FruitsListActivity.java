@@ -9,9 +9,10 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import com.yandex.metrica.Counter;
+import com.yandex.sample.metrica.R;
 
 /**
- * ListActivity.java
+ * FruitsListActivity.java
  *
  * This file is a part of the Yandex.Metrica for Apps.
  *
@@ -20,7 +21,7 @@ import com.yandex.metrica.Counter;
  * You may not use this file except in compliance with the License.
  * You may obtain a copy of the License at http://legal.yandex.com/metrica_termsofuse/
  */
-public class ListActivity extends Activity {
+public class FruitsListActivity extends Activity {
 
     /**
      * Size of listview.
@@ -52,6 +53,9 @@ public class ListActivity extends Activity {
             }
 
         });
+
+        /** Report for activity */
+        Counter.sharedInstance().reportEvent(getClass().getSimpleName());
     }
 
     @Override
@@ -59,7 +63,7 @@ public class ListActivity extends Activity {
         super.onResume();
 
         /** Always need to call */
-        Counter.sharedInstance().onResumeActivity(ListActivity.this);
+        Counter.sharedInstance().onResumeActivity(FruitsListActivity.this);
     }
 
     @Override
@@ -67,7 +71,7 @@ public class ListActivity extends Activity {
         super.onPause();
 
         /** Always need to call */
-        Counter.sharedInstance().onPauseActivity(ListActivity.this);
+        Counter.sharedInstance().onPauseActivity(FruitsListActivity.this);
     }
 
     private final class ListViewAdapter extends ArrayAdapter<String> {

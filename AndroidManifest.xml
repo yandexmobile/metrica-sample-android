@@ -30,7 +30,7 @@
         </activity>
 
         <activity
-            android:name=".ListActivity"
+            android:name=".FruitsListActivity"
             android:label="@string/titleListActivity" />
 
         <!-- Components for Metrica `START` -->

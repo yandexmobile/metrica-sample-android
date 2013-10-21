@@ -2,7 +2,7 @@
 <resources>
     <string name="appName">MetricaUsageApplication</string>
     <string name="menuSettings">Settings</string>
-    <string name="titleMainActivity">Main Screen</string>
+    <string name="titleMainActivity">MetricaUsageApplication</string>
     <string name="titleListActivity">Fruits Screen</string>
     <string name="serviceLabel">MetricaUsageApplicationService</string>
 
