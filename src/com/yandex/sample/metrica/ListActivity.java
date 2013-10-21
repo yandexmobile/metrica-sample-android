@@ -48,7 +48,7 @@ public class ListActivity extends Activity {
 
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Counter.sharedInstance().reportEvent(FRUITS[position]);
+                Counter.sharedInstance().reportEvent(FRUITS[position % FRUITS.length]);
             }
 
         });
