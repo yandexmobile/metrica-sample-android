@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="itemMarginTop">10dp</dimen>
+    <dimen name="itemSectionMarginTop">35dp</dimen>
+    <dimen name="itemTextSize">16sp</dimen>
+    <dimen name="itemMarginLeft">5dp</dimen>
+    <dimen name="itemMarginRight">5dp</dimen>
+    <dimen name="itemHeight">35dp</dimen>
+</resources>

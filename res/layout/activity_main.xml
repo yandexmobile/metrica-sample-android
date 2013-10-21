@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_marginLeft="@dimen/itemMarginLeft"
+            android:layout_marginRight="@dimen/itemMarginRight"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/goListActivityButton"
+                android:layout_marginTop="@dimen/itemMarginTop"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/itemHeight"
+                android:textSize="@dimen/itemTextSize"
+                android:background="@drawable/btn_selector"
+                android:layout_marginBottom="@dimen/itemMarginTop"
+                android:gravity="center"
+                android:text="@string/goListActivity"/>
+
+            <TextView
+                android:layout_marginTop="@dimen/itemMarginTop"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/itemHeight"
+                android:textSize="@dimen/itemTextSize"
+                android:background="@color/holo_orange_light"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:text="@string/sendReportsSection"/>
+
+            <Button
+                android:id="@+id/sendCustomEventButton"
+                android:layout_marginTop="@dimen/itemMarginTop"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/itemHeight"
+                android:textSize="@dimen/itemTextSize"
+                android:background="@drawable/btn_selector"
+                android:gravity="center"
+                android:text="@string/sendCustomEvent"/>
+
+            <Button
+                android:id="@+id/sendCustomErrorButton"
+                android:layout_marginTop="@dimen/itemMarginTop"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/itemHeight"
+                android:textSize="@dimen/itemTextSize"
+                android:background="@drawable/btn_selector"
+                android:gravity="center"
+                android:text="@string/sendCustomError"/>
+
+            <Button
+                android:id="@+id/sendAutoCrashButton"
+                android:layout_marginTop="@dimen/itemMarginTop"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/itemHeight"
+                android:textSize="@dimen/itemTextSize"
+                android:background="@drawable/btn_selector"
+                android:gravity="center"
+                android:text="@string/sendAutoCrash"/>
+
+            <Button
+                android:id="@+id/sendManualCrashButton"
+                android:layout_marginTop="@dimen/itemMarginTop"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/itemHeight"
+                android:textSize="@dimen/itemTextSize"
+                android:background="@drawable/btn_selector"
+                android:gravity="center"
+                android:text="@string/sendManualCrash"/>
+
+            <Button
+                android:id="@+id/sendEventsBufferButton"
+                android:layout_marginTop="@dimen/itemMarginTop"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/itemHeight"
+                android:textSize="@dimen/itemTextSize"
+                android:background="@drawable/btn_selector"
+                android:gravity="center"
+                android:text="@string/sendEventsBuffer"/>
+
+            <TextView
+                android:layout_marginTop="@dimen/itemSectionMarginTop"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/itemHeight"
+                android:textSize="@dimen/itemTextSize"
+                android:textStyle="bold"
+                android:background="@color/holo_orange_light"
+                android:gravity="center"
+                android:text="@string/sessionOptionsSection"/>
+
+            <Button
+                android:id="@+id/setSessionTimeoutTenSecondsButton"
+                android:layout_marginTop="@dimen/itemMarginTop"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/itemHeight"
+                android:textSize="@dimen/itemTextSize"
+                android:background="@drawable/btn_selector"
+                android:gravity="center"
+                android:text="@string/setSessionTimeoutTenSeconds"/>
+
+            <Button
+                android:id="@+id/setSessionTimeoutOneMinuteButton"
+                android:layout_marginTop="@dimen/itemMarginTop"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/itemHeight"
+                android:textSize="@dimen/itemTextSize"
+                android:background="@drawable/btn_selector"
+                android:gravity="center"
+                android:text="@string/setSessionTimeoutOneMinute"/>
+
+            <Button
+                android:id="@+id/setSessionTimeoutFiveMinutesButton"
+                android:layout_marginTop="@dimen/itemMarginTop"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/itemHeight"
+                android:textSize="@dimen/itemTextSize"
+                android:background="@drawable/btn_selector"
+                android:gravity="center"
+                android:text="@string/setSessionTimeoutFiveMinutes"/>
+
+            <Button
+                android:id="@+id/startNewSessionManuallyButton"
+                android:layout_marginTop="@dimen/itemMarginTop"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/itemHeight"
+                android:textSize="@dimen/itemTextSize"
+                android:background="@drawable/btn_selector"
+                android:gravity="center"
+                android:text="@string/startNewSessionManually"/>
+
+            <TextView
+                android:layout_marginTop="@dimen/itemSectionMarginTop"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/itemHeight"
+                android:textSize="@dimen/itemTextSize"
+                android:textStyle="bold"
+                android:background="@color/holo_orange_light"
+                android:gravity="center"
+                android:text="@string/sendOptionsSection"/>
+
+            <Button
+                android:id="@+id/setMaxReportsCountToFiveButton"
+                android:layout_marginTop="@dimen/itemMarginTop"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/itemHeight"
+                android:textSize="@dimen/itemTextSize"
+                android:background="@drawable/btn_selector"
+                android:gravity="center"
+                android:text="@string/setMaxReportsCountToFive"/>
+
+            <Button
+                android:id="@+id/setMaxReportsCountToTenButton"
+                android:layout_marginTop="@dimen/itemMarginTop"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/itemHeight"
+                android:textSize="@dimen/itemTextSize"
+                android:background="@drawable/btn_selector"
+                android:gravity="center"
+                android:text="@string/setMaxReportsCountToTen"/>
+
+            <Button
+                android:id="@+id/setDispatchPeriodToOneMinuteButton"
+                android:layout_marginTop="@dimen/itemMarginTop"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/itemHeight"
+                android:textSize="@dimen/itemTextSize"
+                android:background="@drawable/btn_selector"
+                android:gravity="center"
+                android:text="@string/setDispatchPeriodToOneMinute"/>
+
+            <Button
+                android:id="@+id/setDispatchPeriodToTwoMinutesButton"
+                android:layout_marginTop="@dimen/itemMarginTop"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/itemHeight"
+                android:textSize="@dimen/itemTextSize"
+                android:background="@drawable/btn_selector"
+                android:gravity="center"
+                android:text="@string/setDispatchPeriodToTwoMinutes"/>
+
+            <TextView
+                android:layout_marginTop="@dimen/itemSectionMarginTop"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/itemHeight"
+                android:textSize="@dimen/itemTextSize"
+                android:textStyle="bold"
+                android:background="@color/holo_orange_light"
+                android:gravity="center"
+                android:text="@string/sendReportOptionsSection"/>
+
+            <Button
+                android:id="@+id/setReportsEnabledButton"
+                android:layout_marginTop="@dimen/itemMarginTop"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/itemHeight"
+                android:textSize="@dimen/itemTextSize"
+                android:background="@drawable/btn_selector"
+                android:gravity="center"
+                android:text="@string/setReportsEnabled"/>
+
+            <Button
+                android:id="@+id/setReportsDisabledButton"
+                android:layout_marginTop="@dimen/itemMarginTop"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/itemHeight"
+                android:textSize="@dimen/itemTextSize"
+                android:background="@drawable/btn_selector"
+                android:gravity="center"
+                android:text="@string/setReportsDisabled"/>
+
+            <Button
+                android:id="@+id/setReportCrashesEnabledButton"
+                android:layout_marginTop="@dimen/itemMarginTop"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/itemHeight"
+                android:textSize="@dimen/itemTextSize"
+                android:background="@drawable/btn_selector"
+                android:gravity="center"
+                android:text="@string/setReportCrashesEnabled"/>
+
+            <Button
+                android:id="@+id/setReportCrashesDisabledButton"
+                android:layout_marginTop="@dimen/itemMarginTop"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/itemHeight"
+                android:textSize="@dimen/itemTextSize"
+                android:background="@drawable/btn_selector"
+                android:gravity="center"
+                android:text="@string/setReportCrashesDisabled"/>
+
+            <TextView
+                android:layout_marginTop="@dimen/itemSectionMarginTop"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/itemHeight"
+                android:textSize="@dimen/itemTextSize"
+                android:textStyle="bold"
+                android:background="@color/holo_orange_light"
+                android:gravity="center"
+                android:text="@string/locationOptionsSection"/>
+
+            <Button
+                android:id="@+id/setTrackLocationEnabledButton"
+                android:layout_marginTop="@dimen/itemMarginTop"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/itemHeight"
+                android:textSize="@dimen/itemTextSize"
+                android:background="@drawable/btn_selector"
+                android:gravity="center"
+                android:text="@string/setTrackLocationEnabled"/>
+
+            <Button
+                android:id="@+id/setTrackLocationDisabledButton"
+                android:layout_marginTop="@dimen/itemMarginTop"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/itemHeight"
+                android:textSize="@dimen/itemTextSize"
+                android:background="@drawable/btn_selector"
+                android:gravity="center"
+                android:text="@string/setTrackLocationDisabled"/>
+
+            <Button
+                android:id="@+id/setLocationButton"
+                android:layout_marginTop="@dimen/itemMarginTop"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/itemHeight"
+                android:textSize="@dimen/itemTextSize"
+                android:background="@drawable/btn_selector"
+                android:gravity="center"
+                android:text="@string/setLocation"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
+

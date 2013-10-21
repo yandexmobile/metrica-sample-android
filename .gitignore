@@ -1,0 +1,17 @@
+bin/
+gen/
+build/
+output/
+out/
+releases/
+obj/
+.DS_Store
+*.swp
+.profile
+_*
+lint.xml
+*.iml
+.idea/
+.gradle/
+.project
+.classpath
