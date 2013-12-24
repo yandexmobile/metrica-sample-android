@@ -10,6 +10,13 @@ How to start
 * Check the settings of **metrica-sample-android** project, that the both libraries (**mobmetricalib**, **protobuf**) are added to dependencies.
 *  Now we are ready to launch project!
 
+> **ProGuard:**
+If you build your application with **[ProGuard](http://developer.android.com/tools/help/proguard.html)**, you need to keep the Metrica. You can use the following lines of code:
+
+* `-keep class com.yandex.metrica.** { *; }`
+* `-dontwarn com.yandex.metrica.**`
+
+
 Notes
 -------------------------------
 
@@ -52,6 +59,12 @@ License agreement on use of Yandex.Metrica for Apps SDK is available at: [http:/
 > Библиотека **mobmetricalib** доступна и с включенной в нее библиотекой **protobuf**. В таком случае подключать **protobuf** не нужно.
 * Проверьте в настройках проекта **metrica-sample-android**, что в зависимостях подключены обе библиотеки (**mobmetricalib**, **protobuf**).
 *  Всё готово к запуску тестового проекта.
+
+> **ProGuard:**
+Если вы используете **[ProGuard](http://developer.android.com/tools/help/proguard.html)** при сборке проекта, то следует не изменять Metrica. Вы можете использовать следующие строчки кода:
+
+* `-keep class com.yandex.metrica.** { *; }`
+* `-dontwarn com.yandex.metrica.**`
 
 Примечания к примеру
 -------------------------------
