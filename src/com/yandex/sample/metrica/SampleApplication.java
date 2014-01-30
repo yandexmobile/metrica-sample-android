@@ -1,6 +1,7 @@
 package com.yandex.sample.metrica;
 
 import android.app.Application;
+import android.util.Log;
 import com.yandex.metrica.Counter;
 
 /**
@@ -15,6 +16,8 @@ import com.yandex.metrica.Counter;
  */
 public class SampleApplication extends Application {
 
+    private final static Thread.UncaughtExceptionHandler mDefaultExceptionHandler = Thread.getDefaultUncaughtExceptionHandler();
+
     @Override
     public void onCreate() {
         super.onCreate();
@@ -27,6 +30,10 @@ public class SampleApplication extends Application {
 
         /** Can be set programmatically or into the AndroidManifest.xml */
         /** Counter.sharedInstance().setCustomAppVersion("1.0"); */
+    }
+
+    static Thread.UncaughtExceptionHandler getDefaultExceptionHandler() {
+        return mDefaultExceptionHandler;
     }
 
 }

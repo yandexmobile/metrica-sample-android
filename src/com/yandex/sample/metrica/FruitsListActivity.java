@@ -53,9 +53,6 @@ public class FruitsListActivity extends Activity {
             }
 
         });
-
-        /** Report for activity */
-        Counter.sharedInstance().reportEvent(getClass().getSimpleName());
     }
 
     @Override
@@ -63,7 +60,7 @@ public class FruitsListActivity extends Activity {
         super.onResume();
 
         /** Always need to call */
-        Counter.sharedInstance().onResumeActivity(FruitsListActivity.this);
+        Counter.sharedInstance().onResumeActivity(this);
     }
 
     @Override
@@ -71,7 +68,7 @@ public class FruitsListActivity extends Activity {
         super.onPause();
 
         /** Always need to call */
-        Counter.sharedInstance().onPauseActivity(FruitsListActivity.this);
+        Counter.sharedInstance().onPauseActivity(this);
     }
 
     private final class ListViewAdapter extends ArrayAdapter<String> {

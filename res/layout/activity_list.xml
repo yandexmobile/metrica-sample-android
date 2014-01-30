@@ -5,7 +5,7 @@
 
     <ListView
         android:id="@+id/listView"
-        android:minHeight="?android:attr/listPreferredItemHeightLarge"
+        android:minHeight="?android:attr/listPreferredItemHeight"
         android:background="?android:attr/listDivider"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />

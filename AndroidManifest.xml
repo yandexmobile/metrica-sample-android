@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
           package="com.yandex.sample.metrica"
-          android:versionCode="1"
-          android:versionName="1.0">
+          android:versionCode="2"
+          android:versionName="2.0">
 
     <uses-sdk
-        android:minSdkVersion="5"
+        android:minSdkVersion="8"
         android:targetSdkVersion="15" />
 
     <!-- Permissions for Metrica `START` -->
@@ -21,7 +22,7 @@
         android:name=".SampleApplication">
 
         <activity
-            android:name="MainActivity"
+            android:name=".MainActivity"
             android:label="@string/titleMainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -34,6 +35,8 @@
             android:label="@string/titleListActivity" />
 
         <!-- Components for Metrica `START` -->
+
+        <!-- Optional field. Can be set programmatically. -->
         <meta-data android:name="metrica:api:key" android:value="1111" />
 
         <service android:name="com.yandex.metrica.MetricaService" android:label="@string/serviceLabel" android:process=":Metrica" >
@@ -42,21 +45,19 @@
                 <action android:name="com.yandex.metrica.IMetricaService" />
                 <data android:scheme="metrica" />
             </intent-filter>
-
-            <meta-data android:name="metrica:api:level" android:value="1" />
+            <meta-data android:name="metrica:api:level" android:value="4" />
         </service>
 
-        <receiver android:name="com.yandex.metrica.CampaignReceiver" android:exported="true" >
+        <receiver android:name="com.yandex.metrica.CampaignReceiver" android:exported="true" tools:ignore="ExportedReceiver">
             <intent-filter>
                 <action android:name="com.android.vending.INSTALL_REFERRER" />
             </intent-filter>
         </receiver>
 
-        <receiver android:name="com.yandex.metrica.MetricaEventHandler" >
+        <receiver android:name="com.yandex.metrica.MetricaEventHandler" tools:ignore="ExportedReceiver">
             <intent-filter>
                 <action android:name="com.yandex.metrica.intent.action.SYNC" />
             </intent-filter>
-
             <intent-filter>
                 <action android:name="android.intent.action.PACKAGE_ADDED" />
                 <action android:name="android.intent.action.PACKAGE_DATA_CLEARED" />
@@ -67,7 +68,9 @@
         <provider
             android:name="com.yandex.sample.metrica.provider.MetricaContentProvider"
             android:authorities="com.yandex.sample.metrica.MetricaContentProvider"
-            android:exported="true" />
+            android:exported="true"
+            tools:ignore="ExportedContentProvider"/>
+
         <!-- Components for Metrica `END` -->
 
     </application>
