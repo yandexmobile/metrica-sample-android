@@ -22,10 +22,11 @@ Notes
 * The last **mobmetricalib** library has the version `1.2` and the level of **API**  is `4`.  Thus in the **AndroidManifest.xml** you can see that the **metrica:api:level** value is equal to **4**.
 * The example uses **API_KEY** equal to `1111`. The key is specified in the **AndroidManifest.xml** file, but we can do it programmatically.
 
-* Alternatively you can add **Metrica for Apps** to your project as **maven artifact** from the **maven central**:
+* Alternatively you can add the last version of **Metrica for Apps** to your project as **maven artifact** from the **maven central**:
 
     * **groupId**: com.yandex.android
     * **artifactId**: mobmetricalib
+    * **version**: 1.2
 
 Version 1.2, Changelog
 ------------------------------
@@ -90,10 +91,11 @@ License agreement on use of Yandex.Metrica for Apps SDK is available at: [http:/
 * Данный пример использует библиотеку **mobmetricalib** версии `1.2` и уровнем **API** равным `4`. Поэтому в файле **AndroidManifest.xml** вы можете увидеть, что значение **metrica:api:level** равно **4**.
 * В примере используется тестовый **API_KEY** равный `1111`. В данном примере ключ указывается прямо внутри **AndroidManifest.xml**, но его можно устанавливать и программно.
 
-* Метрику для приложений можно добавить в проект и как **maven-артефакт** с **maven-central**:
+* Последнюю Метрику для приложений можно добавить в проект и как **maven-артефакт** с **maven-central**:
 
     * **groupId**: com.yandex.android
     * **artifactId**: mobmetricalib
+    * **version**: 1.2
     
 Версия 1.2, Список изменений
 ------------------------------
