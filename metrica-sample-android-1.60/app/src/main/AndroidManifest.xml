@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.yandex.sample.metrica">
+
+    <!-- Yandex Metrica required permission. Open network sockets -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <!-- Yandex Metrica required permission. Access information about networks -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <!-- Yandex Metrica optional permission. Approximate location derived from network location sources such as cell towers and Wi-Fi -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+
+    <!-- Yandex Metrica optional permission. Precise location from location sources such as GPS, cell towers, and Wi-Fi -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+
+    <!-- Yandex Metrica optional permission. Wifi state: mac, ssid, ... -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+
+    <application
+        android:allowBackup="true"
+        android:name=".Application"
+        android:label="@string/appName"
+        android:icon="@drawable/ic_launcher"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/titleMainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".FruitsListActivity"
+            android:label="@string/titleListActivity" />
+
+        <!-- Yandex Metrica required manifest entries START -->
+        <service
+            android:name="com.yandex.metrica.MetricaService"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":Metrica"
+            tools:ignore="ExportedService">
+
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="com.yandex.metrica.IMetricaService"/>
+                <data android:scheme="metrica"/>
+            </intent-filter>
+
+            <meta-data android:name="metrica:api:level" android:value="16"/>
+        </service>
+
+        <receiver
+            android:name="com.yandex.metrica.MetricaEventHandler"
+            android:enabled="true"
+            android:exported="true"
+            tools:ignore="ExportedReceiver">
+
+            <intent-filter>
+                <action android:name="com.yandex.metrica.intent.action.SYNC"/>
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED"/>
+                <action android:name="android.intent.action.PACKAGE_DATA_CLEARED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER"/>
+            </intent-filter>
+        </receiver>
+
+        <provider
+            android:name="com.yandex.sample.metrica.provider.MetricaContentProvider"
+            android:authorities="com.yandex.sample.metrica.MetricaContentProvider"
+            android:enabled="true"
+            android:exported="true"
+            tools:ignore="ExportedContentProvider"/>
+        <!-- Yandex Metrica required manifest entries END -->
+
+    </application>
+
+</manifest>
+

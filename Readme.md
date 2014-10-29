@@ -4,14 +4,14 @@ How to start
 ------------
 
 *  Clone repository: git clone https://github.com/yandexmobile/metrica-sample-android.git.
-*  The sample was created by **IntelliJ IDEA**, so just import it to your favorite **IDE**. 
-*  In the folder with name **"libs"** you can find **mobmetricalib** and **protobuf** library. 
-> The **mobmetricalib** library is available with **protobuf** library within itself. In this case in your project shouldn't be the **protobuf** library.
-* Check the settings of **metrica-sample-android** project, that the libraries (**mobmetricalib**, **protobuf** or only **mobmetricalib with the protobuf inside**) are added to dependencies.
+*  Current relevant sample is **metrica-sample-android-1.60**. Old sample - **metrica-sample-android-1.20**. 
+*  The sample was created by **Android Studio**. 
+*  In the folder with name **"libs"** & **"jniLibs"** you can find all necessary libraries. 
+> The **mobmetricalib** library is available with **protobuf** library within itself. In this case your project shouldn't contain **protobuf** library.
 *  Now we are ready to launch project!
 
 > **ProGuard:**
-If you build your application with **[ProGuard](http://developer.android.com/tools/help/proguard.html)**, you need to keep the **Metrica**. You can use the following lines of code:
+If you use **[ProGuard](http://developer.android.com/tools/help/proguard.html)**, you need to keep **com.yandex.metrica** classes. You can use the following lines of code:
 
 * `-keep class com.yandex.metrica.** { *; }`
 * `-dontwarn com.yandex.metrica.**`
@@ -19,42 +19,20 @@ If you build your application with **[ProGuard](http://developer.android.com/too
 Notes
 -------------------------------
 
-* The last **mobmetricalib** library has the version `1.2` and the level of **API**  is `4`.  Thus in the **AndroidManifest.xml** you can see that the **metrica:api:level** value is equal to **4**.
-* The example uses **API_KEY** equal to `1111`. The key is specified in the **AndroidManifest.xml** file, but we can do it programmatically.
+* The last **mobmetricalib** library has the version `1.60` and the level of **API**  is `16`.  Thus in the **AndroidManifest.xml** you can see that the **metrica:api:level** value is equal to **16**.
+* The example uses **API_KEY** = `1111`. 
 
 * Alternatively you can add the last version of **Metrica for Apps** to your project as **maven artifact** from the **maven central**:
 
     * **groupId**: com.yandex.android
     * **artifactId**: mobmetricalib
-    * **version**: 1.2
+    * **version**: 1.60
 
-Version 1.2, Changelog
-------------------------------
-
-* **Yandex.Metrika for Apps** now uses **[protobuf-2.5.0](http://search.maven.org/#artifactdetails%7Ccom.google.protobuf%7Cprotobuf-java%7C2.5.0%7Cbundle)**.
-* **API-level** is now **4**.
-* Greatly reduced the size of the library which is supplied with the **protobuf** library (from 360 Kb to 150 Kb).
-* Added new methods:
-    * `getLibraryVersion()` — returns a version of the library (e.g. **"1.2"**);
-    * `getLibraryApiLevel()` — returns the API level of library (e.g. **4**);
-    * `isMetricaProcess(android.content.Context)` — specifies whether the Metrica process is running or not.
-* Additional statistical parameters:
-    * `"Root" status` — you can read about root devices [here](http://en.wikipedia.org/wiki/Android_rooting);
-    * `Device type` — the next types of devices such as **Smartphone**, **Phablet**, **Tablet**, and **TV** are now displayed.
-* Fixed a large number of bugs:
-    * The `metrica:api:key` option can be omitted in the **AndroidManifest.xml** file and this option can be set programmatically without problems.
-    * Bugs associated with the database.
-    * Bugs associated with **ProGuard**. Now if you build your application with **ProGuard**, you need to keep **Metrica library**. You can use the following lines of code:
-        * `-keep class com.yandex.metrica.** { *; }`
-        * `-dontwarn com.yandex.metrica.**`
-* Fixed **javadocs**.
-
-Additional information
+Documentation
 ---------------------------
-
-* [Documentation in Russian](http://api.yandex.ru/metrica-mobile-sdk/) and [Documentation in English](http://api.yandex.com/metrica-mobile-sdk/), where you can find some additional information about **mobmetricalib**.
-* Various versions of library and **java-docs** are available at [https://github.com/yandexmobile/metrica-sdk-android](https://github.com/yandexmobile/metrica-sdk-android).
 * You can register your app at [Yandex.Metrica for Apps homepage](http://appmetrica.yandex.ru/).
+* [Documentation in Russian](http://api.yandex.ru/metrica-mobile-sdk/) and [Documentation in English](http://api.yandex.com/metrica-mobile-sdk/) are available. You can find some additional information about **mobmetricalib** there.
+* Test example for **mobmetricalib** is available at [https://github.com/yandexmobile/metrica-sample-android](https://github.com/yandexmobile/metrica-sample-android). It demonstrates several library use-cases.  
 
 License
 ---------
@@ -72,12 +50,11 @@ License agreement on use of Yandex.Metrica for Apps SDK is available at: [http:/
 ------------
 
 *  Клонируйте репозиторий примера git clone https://github.com/yandexmobile/metrica-sample-android.git.
-*  Данный пример уже настроен для работы в среде __IntelliJ IDEA__ поэтому
-импортируйте данный тестовый пример в среду **IntelliJ IDEA** или в другую среду разработки, как например **Eclipse**. 
-* В папке **libs** уже находится библиотека **mobmetricalib** и **protobuf**. 
+*  Текущий действующий пример находится в папке **metrica-sample-android-1.60**. Старый пример в **metrica-sample-android-1.20**.
+*  Данный пример был создан в среде разработки **Android Studio**. 
+* В папке **"libs"** & **"jniLibs"** уже находятся все нужные библиотеки.
 > Библиотека **mobmetricalib** доступна и с включенной в нее библиотекой **protobuf**. В таком случае подключать **protobuf** не нужно.
-* Проверьте в настройках проекта **metrica-sample-android**, что в зависимостях подключены библиотеки (**mobmetricalib**, **protobuf** или **mobmetricalib с protobuf внутри**).
-*  Всё готово к запуску тестового проекта.
+*  Теперь мы готовы к запуску тестового проекта.
 
 > **ProGuard:**
 Если вы используете **[ProGuard](http://developer.android.com/tools/help/proguard.html)** при сборке проекта, то следует не изменять **Metrica**. Вы можете использовать следующие строчки кода:
@@ -88,44 +65,20 @@ License agreement on use of Yandex.Metrica for Apps SDK is available at: [http:/
 Примечания к примеру
 -------------------------------
 
-* Данный пример использует библиотеку **mobmetricalib** версии `1.2` и уровнем **API** равным `4`. Поэтому в файле **AndroidManifest.xml** вы можете увидеть, что значение **metrica:api:level** равно **4**.
-* В примере используется тестовый **API_KEY** равный `1111`. В данном примере ключ указывается прямо внутри **AndroidManifest.xml**, но его можно устанавливать и программно.
-
+* Данный пример использует библиотеку **mobmetricalib** версии `1.60` и уровнем **API** равным `16`. Поэтому в файле **AndroidManifest.xml** вы можете увидеть, что значение **metrica:api:level** равно **16**.
+* В примере используется тестовый **API_KEY** = `1111`.
 * Последнюю Метрику для приложений можно добавить в проект и как **maven-артефакт** с **maven-central**:
 
     * **groupId**: com.yandex.android
     * **artifactId**: mobmetricalib
-    * **version**: 1.2
-    
-Версия 1.2, Список изменений
-------------------------------
+    * **version**: 1.60
 
-* **Метрика для приложений** использует **protobuf-2.5.0**.
-* Теперь **metrica:api:level** нужно устанавливать равным 4.
-* Значительно уменьшен размер библиотеки, поставляемой с **protobuf** внутри себя (с 360 Кб до 150 Кб).
-* Добавлены новые методы:
-	* `getLibraryApiLevel()` — возвращает версию билиотеки (например **"1.2"**).
-	* `getLibraryVersion()` — возвращает **API-уровень** библиотеки (например **4**).
-	* `isMetricaProcess(android.content.Context)` — возвращает булевское значение, показывающее находимся ли мы в процессе Метрики или нет.
-* Дополнительные параметры статистики:
-	* `"Root" status` — вы можете почитать о root **[здесь](http://ru.wikipedia.org/wiki/Рутинг)**.
-	* `Device type` — в статистике будут доступны следующие типы устройств: **Смартфон**, **Фаблет**, **Планшет**, **ТВ**.
-* Исправлено большое количество ошибок:
-	* Теперь можно опускать `metrica:api:key` опцию в **AndroidManifest.xml** файле и устанавливать ее программно без проблем.
-	* Ошибки связанные с базой данных.
-	* Ошибки связанные с обфускатором **ProGuard**. Если вы используете **ProGuard** при сборке вашего проекта, то следует не обфусцировать **Metrica**. Вы можете использовать следующие строчки кода ниже:
-		* `-keep class com.yandex.metrica.** { *; }`
-		* `-dontwarn com.yandex.metrica.**`
-* Исправлен **javadocs**.
-
-Дополнительная информация
+Документация
 ---------------------------
+* Вы можете зарегистрировать свое приложение на [домашней странице Yandex.Metrica for Apps](http://appmetrica.yandex.ru/).
+* Доступна [документация на русском](http://api.yandex.ru/metrica-mobile-sdk/) и [на английском](http://api.yandex.com/metrica-mobile-sdk/), в которой содержится полная документация по **mobmetricalib** и описание подключения библиотеки к вашему проекту, а также инструкции по использованию.
+* Доступен тестовый пример, демонстрирующий различные возможности библиотеки. Вы можете найти его в другом репозитории [здесь](https://github.com/yandexmobile/metrica-sample-android).
 
-Также у этого проекта есть:
-
-* [Документация на русском](http://api.yandex.ru/metrica-mobile-sdk/) и [на английском](http://api.yandex.com/metrica-mobile-sdk/), в которой содержится полная документация по **mobmetricalib** и описание подключения библиотеки к вашему проекту, а также инструкции по использованию.
-* Различные версии библиотеки, их описание и их **java-docs** вы можете найти в другом репозитории [тут](https://github.com/yandexmobile/metrica-sdk-android).
-* Зарегистрировать свое приложение можно на [Yandex.Metrica for Apps homepage](http://appmetrica.yandex.ru/).
 
 Лицензия
 ---------
