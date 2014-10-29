@@ -8,10 +8,14 @@ obj/
 .DS_Store
 *.swp
 .profile
+.project
+.classpath
 _*
-lint.xml
 *.iml
 .idea/
 .gradle/
 .project
 .classpath
+.svn/
+.deps/
+local.properties
