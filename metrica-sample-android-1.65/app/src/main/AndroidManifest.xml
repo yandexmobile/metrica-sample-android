@@ -53,7 +53,7 @@
                 <data android:scheme="metrica"/>
             </intent-filter>
 
-            <meta-data android:name="metrica:api:level" android:value="16"/>
+            <meta-data android:name="metrica:api:level" android:value="21"/>
         </service>
 
         <receiver

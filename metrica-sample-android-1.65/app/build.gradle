@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 21
-    buildToolsVersion "21.0.2"
+    buildToolsVersion "21.1.2"
 
     defaultConfig {
         applicationId "com.yandex.sample.metrica"
@@ -16,7 +16,7 @@ android {
 
     buildTypes {
         release {
-            runProguard false
+            minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
@@ -33,5 +33,5 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
 
     // Yandex Metrica from maven central. Protobuf will be included as dependency.
-    compile 'com.yandex.android:mobmetricalib:1.60'
+    compile 'com.yandex.android:mobmetricalib:1.65'
 }
