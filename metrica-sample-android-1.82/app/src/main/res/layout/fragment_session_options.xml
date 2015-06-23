@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:paddingLeft="@dimen/itemMarginLeft"
+            android:paddingRight="@dimen/itemMarginRight"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginTop="@dimen/itemMarginTop"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/itemHeight"
+                android:textSize="@dimen/itemTextSize"
+                android:textStyle="bold"
+                android:background="@color/holo_orange_light"
+                android:gravity="center"
+                android:text="@string/sessionOptionsSection"/>
+
+            <Button
+                android:id="@+id/setSessionTimeoutTenSecondsButton"
+                android:layout_marginTop="@dimen/itemMarginTop"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/itemHeight"
+                android:textSize="@dimen/itemTextSize"
+                android:background="@drawable/btn_selector"
+                android:gravity="center"
+                android:text="@string/setSessionTimeoutTenSeconds"/>
+
+            <Button
+                android:id="@+id/setSessionTimeoutOneMinuteButton"
+                android:layout_marginTop="@dimen/itemMarginTop"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/itemHeight"
+                android:textSize="@dimen/itemTextSize"
+                android:background="@drawable/btn_selector"
+                android:gravity="center"
+                android:text="@string/setSessionTimeoutOneMinute"/>
+
+            <Button
+                android:id="@+id/setSessionTimeoutFiveMinutesButton"
+                android:layout_marginTop="@dimen/itemMarginTop"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/itemHeight"
+                android:textSize="@dimen/itemTextSize"
+                android:background="@drawable/btn_selector"
+                android:gravity="center"
+                android:text="@string/setSessionTimeoutFiveMinutes"/>
+
+            <Button
+                android:id="@+id/startNewSessionManuallyButton"
+                android:layout_marginTop="@dimen/itemMarginTop"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/itemHeight"
+                android:textSize="@dimen/itemTextSize"
+                android:background="@drawable/btn_selector"
+                android:gravity="center"
+                android:text="@string/startNewSessionManually"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
+
