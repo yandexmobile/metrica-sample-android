@@ -50,6 +50,18 @@
             <meta-data android:name="metrica:api:level" android:value="31"/>
         </service>
 
+        <receiver
+            android:name="com.yandex.metrica.MetricaEventHandler"
+            android:enabled="true"
+            android:exported="true">
+
+            <!-- Required for tracking campaigns -->
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER"/>
+            </intent-filter>
+        </receiver>
+        <!-- end of Yandex Metrica -->
+
     </application>
 
 </manifest>
