@@ -4,6 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.yandex.sample.metrica">
 
+    <!-- Yandex Metrica required permission. Open network sockets -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <!-- Yandex Metrica optional permission. Approximate location derived from network location sources such as cell towers and Wi-Fi -->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
 
@@ -49,6 +52,18 @@
 
             <meta-data android:name="metrica:api:level" android:value="31"/>
         </service>
+
+        <receiver
+            android:name="com.yandex.metrica.MetricaEventHandler"
+            android:enabled="true"
+            android:exported="true">
+
+            <!-- Required for tracking campaigns -->
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER"/>
+            </intent-filter>
+        </receiver>
+        <!-- end of Yandex Metrica -->
 
     </application>
 
