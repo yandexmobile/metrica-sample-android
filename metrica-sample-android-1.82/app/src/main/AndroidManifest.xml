@@ -4,6 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.yandex.sample.metrica">
 
+    <!-- Yandex Metrica required permission. Open network sockets -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <!-- Yandex Metrica optional permission. Approximate location derived from network location sources such as cell towers and Wi-Fi -->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
 
