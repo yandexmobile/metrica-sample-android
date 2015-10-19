@@ -4,9 +4,9 @@ How to start
 ------------
 
 *  Clone repository: git clone https://github.com/yandexmobile/metrica-sample-android.git.
-*  Current relevant sample is **metrica-sample-android-2.00**. 
+*  Current relevant sample is **metrica-sample-android-2.20**.
 *  The sample was created by **Android Studio**. 
-*  In the folder with name **"libs"** & **"jniLibs"** you can find all necessary libraries. 
+*  In the folder with name **"libs"** & **"jniLibs"** you can find all necessary libraries.
 *  Now we are ready to launch project!
 
 > **ProGuard:**
@@ -21,13 +21,13 @@ If you use **[ProGuard](http://developer.android.com/tools/help/proguard.html)**
 Notes
 -------------------------------
 
-* The last **mobmetricalib** library has the version `2.00` and the level of **API**  is `32`.  Thus in the **AndroidManifest.xml** you can see that the **metrica:api:level** value is equal to **32**.
+* The last **mobmetricalib** library has the version `2.20` and the level of **API**  is `35`.  Thus in the **AndroidManifest.xml** you can see that the **metrica:api:level** value is equal to **35**.
 
 * Alternatively you can add the last version of **Metrica for Apps** to your project as **maven artifact** from the **maven central**:
 
     * **groupId**: com.yandex.android
     * **artifactId**: mobmetricalib
-    * **version**: 2.00
+    * **version**: 2.20
 
 Documentation
 ---------------------------
@@ -50,7 +50,7 @@ License agreement on use of Yandex.Metrica for Apps SDK is available at: [http:/
 ------------
 
 *  Клонируйте репозиторий примера git clone https://github.com/yandexmobile/metrica-sample-android.git.
-*  Текущий действующий пример находится в папке **metrica-sample-android-2.00**.
+*  Текущий действующий пример находится в папке **metrica-sample-android-2.20**.
 *  Данный пример был создан в среде разработки **Android Studio**. 
 *  В папке **"libs"** & **"jniLibs"** уже находятся все нужные библиотеки.
 > Библиотека **mobmetricalib** доступна и с включенной в нее библиотекой **protobuf**. В таком случае подключать **protobuf** не нужно.
@@ -68,12 +68,12 @@ License agreement on use of Yandex.Metrica for Apps SDK is available at: [http:/
 Примечания к примеру
 -------------------------------
 
-* Данный пример использует библиотеку **mobmetricalib** версии `2.00` и уровнем **API** равным `32`. Поэтому в файле **AndroidManifest.xml** вы можете увидеть, что значение **metrica:api:level** равно **32**.
+* Данный пример использует библиотеку **mobmetricalib** версии `2.20` и уровнем **API** равным `35`. Поэтому в файле **AndroidManifest.xml** вы можете увидеть, что значение **metrica:api:level** равно **35**.
 * Последнюю Метрику для приложений можно добавить в проект и как **maven-артефакт** с **maven-central**:
 
     * **groupId**: com.yandex.android
     * **artifactId**: mobmetricalib
-    * **version**: 2.00
+    * **version**: 2.20
 
 Документация
 ---------------------------

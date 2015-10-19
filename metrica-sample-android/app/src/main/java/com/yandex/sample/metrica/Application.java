@@ -32,5 +32,8 @@ public class Application extends android.app.Application {
          https://tech.yandex.com/metrica-mobile-sdk/doc/mobile-sdk-dg/concepts/android-initialize-docpage/
          */
         YandexMetrica.activate(this, "API_KEY");
+        YandexMetrica.setLogEnabled();
+        //If AppMetrica received referrer broadcast our own MyTrackerReceiver print it to log
+        YandexMetrica.registerReferrerBroadcastReceivers(new MyTrackerReceiver());
     }
 }
