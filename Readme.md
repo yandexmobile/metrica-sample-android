@@ -21,7 +21,7 @@ If you use **[ProGuard](http://developer.android.com/tools/help/proguard.html)**
 Notes
 -------------------------------
 
-* The last **mobmetricalib** library has the version `2.21` and the level of **API**  is `35`.  Thus in the **AndroidManifest.xml** you can see that the **metrica:api:level** value is equal to **35**.
+* The last **mobmetricalib** library has the version `2.21` and the level of **API**  is `36`.  Thus in the **AndroidManifest.xml** you can see that the **metrica:api:level** value is equal to **36**.
 
 * Alternatively you can add the last version of **Metrica for Apps** to your project as **maven artifact** from the **maven central**:
 
@@ -68,7 +68,7 @@ License agreement on use of Yandex.Metrica for Apps SDK is available at: [http:/
 Примечания к примеру
 -------------------------------
 
-* Данный пример использует библиотеку **mobmetricalib** версии `2.21` и уровнем **API** равным `35`. Поэтому в файле **AndroidManifest.xml** вы можете увидеть, что значение **metrica:api:level** равно **35**.
+* Данный пример использует библиотеку **mobmetricalib** версии `2.21` и уровнем **API** равным `36`. Поэтому в файле **AndroidManifest.xml** вы можете увидеть, что значение **metrica:api:level** равно **36**.
 * Последнюю Метрику для приложений можно добавить в проект и как **maven-артефакт** с **maven-central**:
 
     * **groupId**: com.yandex.android
