@@ -36,35 +36,6 @@
             android:name=".FruitsListActivity"
             android:label="@string/titleListActivity" />
 
-        <!-- Yandex Metrica required manifest entries START -->
-        <service
-            android:name="com.yandex.metrica.MetricaService"
-            android:enabled="true"
-            android:exported="true"
-            android:process=":Metrica"
-            tools:ignore="ExportedService">
-
-            <intent-filter>
-                <category android:name="android.intent.category.DEFAULT"/>
-                <action android:name="com.yandex.metrica.IMetricaService"/>
-                <data android:scheme="metrica"/>
-            </intent-filter>
-
-            <meta-data android:name="metrica:api:level" android:value="36"/>
-        </service>
-
-        <receiver
-            android:name="com.yandex.metrica.MetricaEventHandler"
-            android:enabled="true"
-            android:exported="true">
-
-            <!-- Required for tracking campaigns -->
-            <intent-filter>
-                <action android:name="com.android.vending.INSTALL_REFERRER"/>
-            </intent-filter>
-        </receiver>
-        <!-- end of Yandex Metrica -->
-
     </application>
 
 </manifest>
