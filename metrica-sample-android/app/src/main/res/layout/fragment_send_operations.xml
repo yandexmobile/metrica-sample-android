@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:paddingLeft="@dimen/itemMarginLeft"
+            android:paddingRight="@dimen/itemMarginRight"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginTop="@dimen/itemMarginTop"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/itemHeight"
+                android:textSize="@dimen/itemTextSize"
+                android:background="@color/holo_orange_light"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:text="@string/sendReportsSection"/>
+
+            <Button
+                android:id="@+id/sendCustomEventButton"
+                android:layout_marginTop="@dimen/itemMarginTop"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/itemHeight"
+                android:textSize="@dimen/itemTextSize"
+                android:background="@drawable/btn_selector"
+                android:gravity="center"
+                android:text="@string/sendCustomEvent"/>
+
+            <Button
+                android:id="@+id/sendCustomErrorButton"
+                android:layout_marginTop="@dimen/itemMarginTop"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/itemHeight"
+                android:textSize="@dimen/itemTextSize"
+                android:background="@drawable/btn_selector"
+                android:gravity="center"
+                android:text="@string/sendCustomError"/>
+
+            <Button
+                android:id="@+id/sendJsonButton"
+                android:layout_marginTop="@dimen/itemMarginTop"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/itemHeight"
+                android:textSize="@dimen/itemTextSize"
+                android:background="@drawable/btn_selector"
+                android:gravity="center"
+                android:text="@string/sendJson"/>
+
+            <Button
+                android:id="@+id/sendAttributesButton"
+                android:layout_marginTop="@dimen/itemMarginTop"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/itemHeight"
+                android:textSize="@dimen/itemTextSize"
+                android:background="@drawable/btn_selector"
+                android:gravity="center"
+                android:text="@string/sendAttributes"/>
+
+            <Button
+                android:id="@+id/sendAutoCrashButton"
+                android:layout_marginTop="@dimen/itemMarginTop"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/itemHeight"
+                android:textSize="@dimen/itemTextSize"
+                android:background="@drawable/btn_selector"
+                android:gravity="center"
+                android:text="@string/sendAutoCrash"/>
+
+            <Button
+                android:id="@+id/sendAutoNativeCrashButton"
+                android:layout_marginTop="@dimen/itemMarginTop"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/itemHeight"
+                android:textSize="@dimen/itemTextSize"
+                android:background="@drawable/btn_selector"
+                android:gravity="center"
+                android:text="@string/sendAutoNativeCrash"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
+
