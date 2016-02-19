@@ -1,5 +1,8 @@
 package com.yandex.sample.metrica;
 
+import android.os.Build;
+import android.os.StrictMode;
+
 import com.yandex.metrica.YandexMetrica;
 import com.yandex.metrica.YandexMetricaConfig;
 
