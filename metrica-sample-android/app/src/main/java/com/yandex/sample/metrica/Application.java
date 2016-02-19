@@ -48,11 +48,13 @@ public class Application extends android.app.Application {
             StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder()
                     .detectAll()
                     .penaltyLog()
+                    // Not recommended: you can comment penaltyDeath() and app will not crash
                     .penaltyDeath()
                     .build());
             StrictMode.setVmPolicy(new StrictMode.VmPolicy.Builder()
                     .detectAll()
                     .penaltyLog()
+                    // Not recommended: you can comment penaltyDeath() and app will not crash
                     .penaltyDeath()
                     .build());
         }
