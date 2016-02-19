@@ -27,6 +27,7 @@ public class Application extends android.app.Application {
 
     @Override
     public void onCreate() {
+        enableStrictMode();
         super.onCreate();
 
         /* Replace API_KEY with your unique API key. Please, read official documentation how to obtain one:
@@ -37,5 +38,20 @@ public class Application extends android.app.Application {
 
         //If AppMetrica received referrer broadcast our own MyTrackerReceiver print it to log
         YandexMetrica.registerReferrerBroadcastReceivers(new MyTrackerReceiver());
+    }
+
+    private void enableStrictMode() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.GINGERBREAD) {
+            StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder()
+                    .detectAll()
+                    .penaltyLog()
+                    .penaltyDeath()
+                    .build());
+            StrictMode.setVmPolicy(new StrictMode.VmPolicy.Builder()
+                    .detectAll()
+                    .penaltyLog()
+                    .penaltyDeath()
+                    .build());
+        }
     }
 }
