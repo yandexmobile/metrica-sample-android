@@ -1,0 +1,11 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.yandex.sample.metrica.authlibrary">
+
+    <application>
+
+        <activity android:name=".LoginActivity">
+        </activity>
+
+    </application>
+
+</manifest>
