@@ -4,7 +4,7 @@ How to start
 ------------
 
 *  Clone repository: git clone https://github.com/yandexmobile/metrica-sample-android.git.
-*  Current relevant sample is **metrica-sample-android-2.30**.
+*  Current relevant sample is **metrica-sample-android-2.41**.
 *  The sample was created by **Android Studio**.
 *  In the folder with name **"libs"** & **"jniLibs"** you can find all necessary libraries.
 *  You only should obtain and define your own API_KEY.
@@ -22,13 +22,13 @@ If you use **[ProGuard](http://developer.android.com/tools/help/proguard.html)**
 Notes
 -------------------------------
 
-* The last **mobmetricalib** library has the version `2.30` and the level of **API**  is `39`.  Because of using aar version of library, it's only can be defined optional permissions.
+* The last **mobmetricalib** library has the version `2.41` and the level of **API**  is `44`.  Because of using aar version of library, it's only can be defined optional permissions.
 
 * Alternatively you can add the last version of **Metrica for Apps** to your project as **maven artifact** from the **maven central**:
 
     * **groupId**: com.yandex.android
     * **artifactId**: mobmetricalib
-    * **version**: 2.30
+    * **version**: 2.41
 
 Documentation
 ---------------------------
@@ -51,7 +51,7 @@ License agreement on use of Yandex.Metrica for Apps SDK is available at: [http:/
 ------------
 
 *  Клонируйте репозиторий примера git clone https://github.com/yandexmobile/metrica-sample-android.git.
-*  Текущий действующий пример находится в папке **metrica-sample-android-2.30**.
+*  Текущий действующий пример находится в папке **metrica-sample-android-2.41**.
 *  Данный пример был создан в среде разработки **Android Studio**.
 *  В папке **"libs"** & **"jniLibs"** уже находятся все нужные библиотеки.
 > Библиотека **mobmetricalib** доступна и с включенной в нее библиотекой **protobuf**. В таком случае подключать **protobuf** не нужно.
@@ -70,12 +70,12 @@ License agreement on use of Yandex.Metrica for Apps SDK is available at: [http:/
 Примечания к примеру
 -------------------------------
 
-* Данный пример использует библиотеку **mobmetricalib** версии `2.30` и уровнем **API** равным `39`. Так как используется aar версия библиотеки, нет необходимости задавать в AndroidManifest.xml дополнительных компонентов AppMetrica. Можно задать только опциональные разрешения. 
+* Данный пример использует библиотеку **mobmetricalib** версии `2.41` и уровнем **API** равным `44`. Так как используется aar версия библиотеки, нет необходимости задавать в AndroidManifest.xml дополнительных компонентов AppMetrica. Можно задать только опциональные разрешения. 
 * Последнюю Метрику для приложений можно добавить в проект и как **maven-артефакт** с **maven-central**:
 
     * **groupId**: com.yandex.android
     * **artifactId**: mobmetricalib
-    * **version**: 2.30
+    * **version**: 2.41
 
 Документация
 ---------------------------
