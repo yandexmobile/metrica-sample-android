@@ -3,11 +3,12 @@ Usage example of **Yandex.Metrica for Android Apps**.
 How to start
 ------------
 
-*  Clone repository: git clone https://github.com/yandexmobile/metrica-sample-android.git.
-*  Current relevant sample is **metrica-sample-android-2.41**.
+*  Clone repository: git clone https://github.com/yandexmobile/metrica-sample-android.git
+*  Current relevant sample is **metrica-sample-android**.
 *  The sample was created by **Android Studio**.
 *  In the folder with name **"libs"** & **"jniLibs"** you can find all necessary libraries.
 *  You only should obtain and define your own API_KEY.
+*  Example of using **Reporters** shown in project **library**
 *  Now we are ready to launch project!
 
 > **ProGuard:**
@@ -51,11 +52,12 @@ License agreement on use of Yandex.Metrica for Apps SDK is available at: [http:/
 ------------
 
 *  Клонируйте репозиторий примера git clone https://github.com/yandexmobile/metrica-sample-android.git.
-*  Текущий действующий пример находится в папке **metrica-sample-android-2.41**.
+*  Текущий действующий пример находится в папке **metrica-sample-android**.
 *  Данный пример был создан в среде разработки **Android Studio**.
 *  В папке **"libs"** & **"jniLibs"** уже находятся все нужные библиотеки.
 > Библиотека **mobmetricalib** доступна и с включенной в нее библиотекой **protobuf**. В таком случае подключать **protobuf** не нужно.
 * Необходимо лишь получить и задать свой собственный API_KEY. 
+* Пример использования **Репортеров** дан в проекте **library**
 * Теперь мы готовы к запуску тестового проекта.
 
 > **ProGuard:**
