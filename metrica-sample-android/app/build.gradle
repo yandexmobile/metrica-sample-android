@@ -33,5 +33,5 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
 
     // Yandex Metrica from maven central. Protobuf nano will be included with custom package name.
-    compile 'com.yandex.android:mobmetricalib:2.40'
+    compile 'com.yandex.android:mobmetricalib:2.41'
 }
