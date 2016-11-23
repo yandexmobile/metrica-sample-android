@@ -1,14 +1,14 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 23
+    compileSdkVersion 24
     buildToolsVersion "23.0.3"
 
     defaultConfig {
         applicationId "com.yandex.sample.metrica"
 
-        minSdkVersion 8
-        targetSdkVersion 23
+        minSdkVersion 9
+        targetSdkVersion 24
 
         versionCode 3
         versionName "3.0"
@@ -27,11 +27,10 @@ repositories {
 }
 
 dependencies {
-    compile 'com.android.support:appcompat-v7:23.0.0'
+    compile 'com.android.support:appcompat-v7:24.2.0'
 
     // Include *.jar files from libs folder inside your project.
     compile fileTree(dir: 'libs', include: ['*.jar'])
 
-    // Yandex Metrica from maven central. Protobuf nano will be included with custom package name.
-    compile 'com.yandex.android:mobmetricalib:2.51'
+    compile 'com.yandex.android:mobmetricalib:2.60'
 }

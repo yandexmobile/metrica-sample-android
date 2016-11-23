@@ -1,5 +1,7 @@
 package com.yandex.sample.metrica;
 
+import android.os.Build;
+
 import com.yandex.metrica.YandexMetrica;
 import com.yandex.metrica.YandexMetricaConfig;
 
@@ -8,7 +10,7 @@ import com.yandex.metrica.YandexMetricaConfig;
  *
  * This file is a part of the Yandex.Metrica for Apps.
  *
- * Version for Android © 2015 YANDEX
+ * Version for Android © 2016 YANDEX
  *
  * You may not use this file except in compliance with the License.
  * You may obtain a copy of the License at http://legal.yandex.com/metrica_termsofuse/
@@ -37,5 +39,10 @@ public class Application extends android.app.Application {
 
         //If AppMetrica received referrer broadcast our own MyTrackerReceiver print it to log
         YandexMetrica.registerReferrerBroadcastReceivers(new MyTrackerReceiver());
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH) {
+            YandexMetrica.enableActivityAutoTracking(this);
+        }
+
     }
 }
