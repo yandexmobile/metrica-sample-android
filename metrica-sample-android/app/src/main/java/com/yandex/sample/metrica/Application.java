@@ -37,7 +37,7 @@ public class Application extends android.app.Application {
         YandexMetricaConfig config = YandexMetricaConfig.newConfigBuilder("API_KEY").setLogEnabled().build();
         YandexMetrica.activate(this, config);
 
-        //If AppMetrica received referrer broadcast our own MyTrackerReceiver print it to log
+        //If AppMetrica has received referrer broadcast our own MyTrackerReceiver prints it to log
         YandexMetrica.registerReferrerBroadcastReceivers(new MyTrackerReceiver());
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH) {
