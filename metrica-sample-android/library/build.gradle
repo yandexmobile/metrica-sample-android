@@ -19,6 +19,6 @@ android {
 }
 
 dependencies {
-    compile 'com.yandex.android:mobmetricalib:2.77'
+    compile 'com.yandex.android:mobmetricalib:2.78'
     compile 'com.android.support:appcompat-v7:24.2.0'
 }
