@@ -1,3 +1,11 @@
+/**
+ * Version for Android
+ * © 2012–2017 YANDEX
+ * You may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * https://yandex.com/legal/appmetrica_sdk_agreement/
+ */
+
 package com.yandex.sample.metrica;
 
 import android.content.Context;
@@ -9,16 +17,6 @@ import android.widget.ListView;
 
 import com.yandex.metrica.YandexMetrica;
 
-/**
- * FruitsListActivity.java
- *
- * This file is a part of the Yandex.Metrica for Apps.
- *
- * Version for Android © 2016 YANDEX
- *
- * You may not use this file except in compliance with the License.
- * You may obtain a copy of the License at http://legal.yandex.com/metrica_termsofuse/
- */
 public class FruitsListActivity extends BaseActivity {
 
     @Override
