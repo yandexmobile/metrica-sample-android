@@ -23,12 +23,6 @@ public abstract class BasePageFragment extends Fragment {
 
         mPositionToFragmentsMapping.put(SendOperationsPageFragment.getPagePosition(), new SendOperationsPageFragment());
         mPositionToTitlesMapping.put(SendOperationsPageFragment.getPagePosition(), SendOperationsPageFragment.getPageTitle());
-
-        mPositionToFragmentsMapping.put(SessionOptionsPageFragment.getPagePosition(), new SessionOptionsPageFragment());
-        mPositionToTitlesMapping.put(SessionOptionsPageFragment.getPagePosition(), SessionOptionsPageFragment.getPageTitle());
-
-        mPositionToFragmentsMapping.put(SendOptionsPageFragment.getPagePosition(), new SendOptionsPageFragment());
-        mPositionToTitlesMapping.put(SendOptionsPageFragment.getPagePosition(), SendOptionsPageFragment.getPageTitle());
     }
 
     static String getPageTitleByPosition(final int pagePosition) {

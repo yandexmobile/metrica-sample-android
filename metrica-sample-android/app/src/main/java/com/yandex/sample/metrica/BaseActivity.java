@@ -26,7 +26,7 @@ public class BaseActivity extends AppCompatActivity {
         //  - sessions duration
         //  - app usage frequency
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.ICE_CREAM_SANDWICH) {
-            YandexMetrica.onResumeActivity(this);
+            YandexMetrica.resumeSession(this);
         }
 
     }
@@ -42,7 +42,7 @@ public class BaseActivity extends AppCompatActivity {
         //  - sessions duration
         //  - app usage frequency
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.ICE_CREAM_SANDWICH) {
-            YandexMetrica.onPauseActivity(this);
+            YandexMetrica.pauseSession(this);
         }
     }
 
