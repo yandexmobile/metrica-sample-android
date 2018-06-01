@@ -9,11 +9,11 @@
 package com.yandex.sample.metrica;
 
 import android.os.Build;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 
 import com.yandex.metrica.YandexMetrica;
 
-public class BaseActivity extends ActionBarActivity {
+public class BaseActivity extends AppCompatActivity {
 
     @Override
     protected void onResume() {
