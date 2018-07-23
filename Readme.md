@@ -6,19 +6,9 @@ How to start
 *  Clone repository: git clone https://github.com/yandexmobile/metrica-sample-android.git
 *  Current relevant sample is **metrica-sample-android**.
 *  The sample was created by **Android Studio**.
-*  In the folder with name **"libs"** & **"jniLibs"** you can find all necessary libraries.
 *  You only should obtain and define your own API_KEY.
 *  Example of using **Reporters** shown in project **library**
 *  Now we are ready to launch project!
-
-> **ProGuard:**
-If you use **[ProGuard](http://developer.android.com/tools/help/proguard.html)**, you need to keep **com.yandex.metrica** classes. You can use the following lines of code:
-
-* `-keep class com.yandex.metrica.impl.* { *; }`
-* `-dontwarn com.yandex.metrica.impl.*`
-
-* `-keep class com.yandex.metrica.* { *; }`
-* `-dontwarn com.yandex.metrica.*`
 
 Documentation
 ---------------------------
