@@ -80,13 +80,6 @@ public class Stuff {
 
     public static final JSONObject EVENT_AS_JSON = loadEventAsJson();
 
-    public static Map<String, String> ENVIRONMENT_VALUES = new HashMap<String, String>() {
-        {
-            put("envKey1", "envValue1");
-            put("envKey2", "envValue2");
-        }
-    };
-
     private static JSONObject loadEventAsJson() {
         JSONObject eventParameters;
 

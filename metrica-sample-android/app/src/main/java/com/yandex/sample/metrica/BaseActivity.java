@@ -9,11 +9,11 @@
 package com.yandex.sample.metrica;
 
 import android.os.Build;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 
 import com.yandex.metrica.YandexMetrica;
 
-public class BaseActivity extends ActionBarActivity {
+public class BaseActivity extends AppCompatActivity {
 
     @Override
     protected void onResume() {
@@ -26,7 +26,7 @@ public class BaseActivity extends ActionBarActivity {
         //  - sessions duration
         //  - app usage frequency
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.ICE_CREAM_SANDWICH) {
-            YandexMetrica.onResumeActivity(this);
+            YandexMetrica.resumeSession(this);
         }
 
     }
@@ -42,7 +42,7 @@ public class BaseActivity extends ActionBarActivity {
         //  - sessions duration
         //  - app usage frequency
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.ICE_CREAM_SANDWICH) {
-            YandexMetrica.onPauseActivity(this);
+            YandexMetrica.pauseSession(this);
         }
     }
 

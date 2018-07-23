@@ -32,7 +32,7 @@ public class Application extends android.app.Application {
         /* Replace API_KEY with your unique API key. Please, read official documentation how to obtain one:
          https://tech.yandex.com/metrica-mobile-sdk/doc/mobile-sdk-dg/concepts/android-initialize-docpage/
          */
-        YandexMetricaConfig config = YandexMetricaConfig.newConfigBuilder("API_KEY").setLogEnabled().build();
+        YandexMetricaConfig config = YandexMetricaConfig.newConfigBuilder("API_KEY").withLogs().build();
         YandexMetrica.activate(this, config);
 
         //If AppMetrica has received referrer broadcast our own MyTrackerReceiver prints it to log
