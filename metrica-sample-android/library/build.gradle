@@ -19,6 +19,6 @@ android {
 }
 
 dependencies {
-    implementation 'com.yandex.android:mobmetricalib:3.7.2'
+    implementation 'com.yandex.android:mobmetricalib:3.8.0'
     implementation 'com.android.support:appcompat-v7:27.1.1'
 }
