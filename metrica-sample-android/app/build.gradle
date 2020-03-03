@@ -32,6 +32,6 @@ dependencies {
     // Include *.jar files from libs folder inside your project.
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    implementation 'com.yandex.android:mobmetricalib:3.10.0'
+    implementation ('com.yandex.android:mobmetricalib:3.13.1')
     implementation 'com.android.installreferrer:installreferrer:1.0'
 }
