@@ -8,22 +8,10 @@
 
 package com.yandex.sample.metrica;
 
-import android.os.Build;
-
 import com.yandex.metrica.YandexMetrica;
 import com.yandex.metrica.YandexMetricaConfig;
 
 public class Application extends android.app.Application {
-
-    private static boolean sIsLocationTrackingEnabled = true;
-
-    public static void setLocationTrackingEnabled(final boolean value) {
-        sIsLocationTrackingEnabled = value;
-    }
-
-    public static boolean isIsLocationTrackingEnabled() {
-        return sIsLocationTrackingEnabled;
-    }
 
     @Override
     public void onCreate() {
@@ -34,13 +22,5 @@ public class Application extends android.app.Application {
          */
         YandexMetricaConfig config = YandexMetricaConfig.newConfigBuilder("API_KEY").withLogs().build();
         YandexMetrica.activate(this, config);
-
-        //If AppMetrica has received referrer broadcast our own MyTrackerReceiver prints it to log
-        YandexMetrica.registerReferrerBroadcastReceivers(new MyTrackerReceiver());
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH) {
-            YandexMetrica.enableActivityAutoTracking(this);
-        }
-
     }
 }
