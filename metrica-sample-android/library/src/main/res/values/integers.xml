@@ -1,0 +1,3 @@
+<resources>
+    <item type="integer" name="login" format="integer">100</item>
+</resources>

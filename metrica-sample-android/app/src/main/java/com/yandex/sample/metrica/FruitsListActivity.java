@@ -15,9 +15,11 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.yandex.metrica.YandexMetrica;
 
-public class FruitsListActivity extends BaseActivity {
+public class FruitsListActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +39,7 @@ public class FruitsListActivity extends BaseActivity {
         });
     }
 
-    private final class ListViewAdapter extends ArrayAdapter<String> {
+    private static final class ListViewAdapter extends ArrayAdapter<String> {
 
         public ListViewAdapter(Context context) {
             super(context, android.R.layout.simple_list_item_1, android.R.id.text1);

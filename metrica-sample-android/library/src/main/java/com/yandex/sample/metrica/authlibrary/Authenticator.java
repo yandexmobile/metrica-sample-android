@@ -8,6 +8,7 @@ import android.os.Looper;
 import android.util.SparseArray;
 
 import com.yandex.metrica.IReporter;
+import com.yandex.metrica.ReporterConfig;
 import com.yandex.metrica.YandexMetrica;
 
 import java.util.Random;
@@ -31,7 +32,7 @@ public class Authenticator {
         }
     };
 
-    private static Object INITIALIZATION_MONITOR = new Object();
+    private static final Object INITIALIZATION_MONITOR = new Object();
 
     private static Authenticator sInstance;
 
@@ -54,6 +55,7 @@ public class Authenticator {
     private final Handler mUIHandler = new Handler(Looper.getMainLooper());
 
     private Authenticator(Context context) {
+        YandexMetrica.activateReporter(context, ReporterConfig.newConfigBuilder(API_KEY).withLogs().build());
         //You can store reference to reporter to simplify your code.
         mReporter = YandexMetrica.getReporter(context, API_KEY);
         HandlerThread thread = new HandlerThread("AuthenticatorThread");

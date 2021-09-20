@@ -10,16 +10,18 @@ package com.yandex.sample.metrica;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.PagerAdapter;
-import android.support.v4.view.ViewPager;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-public class MainActivity extends BaseActivity {
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.viewpager.widget.PagerAdapter;
+import androidx.viewpager.widget.ViewPager;
+
+public class MainActivity extends AppCompatActivity {
 
     private ViewPager mPager;
     private PagerAdapter mPagerAdapter;
@@ -59,7 +61,7 @@ public class MainActivity extends BaseActivity {
         }
     }
 
-    private final class SampleFragmentPagerAdapter extends FragmentPagerAdapter {
+    private static final class SampleFragmentPagerAdapter extends FragmentPagerAdapter {
 
         public SampleFragmentPagerAdapter(FragmentManager fragmentManager) {
             super(fragmentManager);
